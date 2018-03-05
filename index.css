@@ -1,0 +1,119 @@
+body {
+    margin: 0px
+}
+
+.content {
+    display: flex
+}
+
+.left {
+    background-color: blue;
+    flex: 1;
+    height: 100px;
+}
+
+.middle {
+    background-color: green;
+    flex: 1;
+}
+
+.right {
+    background-color: red;
+    flex: 1
+}
+
+.title {
+    text-align: center;
+    position: relative;
+    height: 30px;
+    margin-top: 10px
+}
+
+.title a {
+    color: grey;
+}
+.title a:hover {
+    color: blue;
+}
+.second-left {
+    width: 200px;
+    position: absolute;
+    left: 0px;
+    height: 200px;
+    background-color: lightgray
+}
+
+.second-right {
+    width: 200px;
+    position: absolute;
+    right: 0px;
+    height: 200px;
+    background-color: lightgray
+}
+
+.second-main {
+    margin: 0 210px;
+    background-color: gold;
+    height: 200px;
+}
+.fifth-left{
+    float: left;
+    width: 200px;
+    background-color: lightgray;
+    height: 200px;
+    margin-left: -100%
+}
+.fifth-main{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.fifth-main .body{
+    background-color: gold;
+    height: 200px;
+    margin: 0 210px;
+}
+.fifth-right{
+    float: left;
+    margin-left: -200px;
+    width: 200px;
+    background-color: lightgray;
+    height: 200px;
+}
+.third-content{
+    display: flex;
+    height: 200px;
+}
+.third-left{
+    flex-basis: 200px;
+    background-color: lightgray
+}
+.third-main{
+    flex-grow: 1;
+    background-color: gold;
+    margin: 0 10px
+}
+.third-right{
+    flex-basis: 200px;
+    background-color: lightgray
+}  
+.title::after{
+    border: 10px solid #fff;
+    border-right-color: #EBEBEB;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 900px;
+    top: 2px;
+    content: "";
+}
+.title::before{
+    border: 10px solid #fff;
+    border-left-color: #EBEBEB;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 2px;
+    left: 540px;
+    content: "";
+}
