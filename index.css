@@ -254,3 +254,8 @@ body,ul{
 .div3-item:hover{
     background: #7fd0f74f
 }
+.ninth{
+    width: 90%;
+    margin: auto;
+    height: 200px;
+}
