@@ -2,9 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <script src="./index.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -80,10 +78,59 @@
         <div class="title">
             拖拽
         </div>
-        <div class="div1" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <br />
-        <img class="drag" id="drag1" src="./images/user4.png" style="width:50px;height:50px" draggable="true" ondragstart="drag(event)"></img>
+        <div class="content">
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <br />
+            <img class="drag" id="drag1" src="./images/user4.png" style="width:50px;height:50px" draggable="true" ondragstart="drag(event)"></img>
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
     </div>
+    <div class="eighth">
+        <div class="title">
+            拖拽排序
+        </div>
+        <div id="div3">
+            <!-- <ul>
+                <li><a>nyf</a></li>
+                <li><a>zsj</a></li>
+                <li><a>hds</a></li>
+            </ul> -->
+            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
+            <div class="div3-item" draggable="true" ondragstart="domdrugstart(event)" ondragenter="domdrugenter(event)" ondragover="domdrugover(event)"
+                ondragleave="domdrugleave(event)" ondrop="domdrop(event)" ondragend="domdrapend(event)">zsj</div>
+            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
+            <div class="div3-item" draggable="true" ondragstart="domdrugstart(event)" ondragenter="domdrugenter(event)" ondragover="domdrugover(event)"
+                ondragleave="domdrugleave(event)" ondrop="domdrop(event)" ondragend="domdrapend(event)">hds</div>
+            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
+            <div class="div3-item" draggable="true" ondragstart="domdrugstart(event)" ondragenter="domdrugenter(event)" ondragover="domdrugover(event)"
+                ondragleave="domdrugleave(event)" ondrop="domdrop(event)" ondragend="domdrapend(event)">nyf</div>
+            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
+            <div class="div3-item" draggable="true" ondragstart="domdrugstart(event)" ondragenter="domdrugenter(event)" ondragover="domdrugover(event)"
+                ondragleave="domdrugleave(event)" ondrop="domdrop(event)" ondragend="domdrapend(event)">fnn</div>
+            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
+        </div>
+        <pre>
+            <code class="html">
+                    &lt;p&gt;de&lt;/p&gt;
+                    &lt;div&gt;de&lt;/div&gt;
+                    &lt;div&gt;de&lt;/div&gt;
+                    &lt;div class="seventh"&gt;
+                            &lt;div class="title"&gt;
+                                拖拽
+                            &lt;/div&gt;
+                            &lt;div class="content"&gt;
+                                &lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
+                                &lt;br /&gt;
+                                &lt;img class="drag" id="drag1" src="./images/user4.png" style="width:50px;height:50px" draggable="true" ondragstart="drag(event)"&gt;&lt;/img&gt;
+                                &lt;div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                        &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="./index.js"></script>
 </body>
 
 </HTML>
