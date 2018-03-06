@@ -3,6 +3,12 @@
 <head>
     <link rel="stylesheet" href="index.css">
     <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <!-- import Vue.js -->
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+    <!-- import stylesheet -->
+    <link rel="stylesheet" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <!-- import iView -->
+    <script src="https://cdn.bootcss.com/iview/2.9.2/iview.min.js"></script>
 </head>
 
 <body>
@@ -85,6 +91,21 @@
             <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </div>
     </div>
+    <pre>
+        <code class="html">
+                &lt;div class="seventh"&gt;
+                        &lt;div class="title"&gt;
+                            拖拽
+                        &lt;/div&gt;
+                        &lt;div class="content"&gt;
+                            &lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
+                            &lt;br /&gt;
+                            &lt;img class="drag" id="drag1" src="./images/user4.png" style="width:50px;height:50px" draggable="true" ondragstart="drag(event)"&gt;&lt;/img&gt;
+                            &lt;div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                    &lt;/div&gt;
+        </code>
+    </pre>
     <div class="eighth">
         <div class="title">
             拖拽排序
@@ -109,24 +130,62 @@
                 ondragleave="domdrugleave(event)" ondrop="domdrop(event)" ondragend="domdrapend(event)">fnn</div>
             <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
         </div>
-        <pre>
-            <code class="html">
-                    &lt;p&gt;de&lt;/p&gt;
-                    &lt;div&gt;de&lt;/div&gt;
-                    &lt;div&gt;de&lt;/div&gt;
-                    &lt;div class="seventh"&gt;
-                            &lt;div class="title"&gt;
-                                拖拽
-                            &lt;/div&gt;
-                            &lt;div class="content"&gt;
-                                &lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
-                                &lt;br /&gt;
-                                &lt;img class="drag" id="drag1" src="./images/user4.png" style="width:50px;height:50px" draggable="true" ondragstart="drag(event)"&gt;&lt;/img&gt;
-                                &lt;div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
-                                &lt;/div&gt;
-                        &lt;/div&gt;
-            </code>
-        </pre>
+        <div class="ninth">
+            <div class="title">
+                iview表格排序
+            </div>
+            <div id="app">
+                <i-table id="app" :columns="columns1" :data="data1"></i-table>
+            </div>
+            </div>
+            <script>
+                new Vue({
+                    el: '#app',
+                    data: {
+                        columns1: [
+                    {
+                        title: 'Name',
+                        key: 'name'
+                    },
+                    {
+                        title: 'Age',
+                        key: 'age'
+                    },
+                    {
+                        title: 'Address',
+                        key: 'address'
+                    }
+                ],
+                data1: [
+                    {
+                        name: 'John Brown',
+                        age: 18,
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
+                    },
+                    {
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
+                    },
+                    {
+                        name: 'Joe Black',
+                        age: 30,
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
+                    },
+                    {
+                        name: 'Jon Snow',
+                        age: 26,
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
+                    }
+                ]
+                    },
+                    methods: {}
+                })
+              </script>
     </div>
     <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
