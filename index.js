@@ -46,15 +46,13 @@ function domdrugstart(e) {
     }
     console.log(dragEl)
     if (dragEl != e.target) {
-    console.log("ok")
       dragEl.innerHTML = e.target.innerHTML;
-      this.innerHTML = e.dataTransfer.getData('text/html');
+      e.target.innerHTML = e.dataTransfer.getData('text/html');
     }    
     
     return false;
   }
   function domdrapend(e) {
-    console.log("第六步")
       e.target.classList.remove('over');
       e.target.style.opacity = '1';
   }     

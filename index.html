@@ -111,24 +111,14 @@
             拖拽排序
         </div>
         <div id="div3">
-            <!-- <ul>
-                <li><a>nyf</a></li>
-                <li><a>zsj</a></li>
-                <li><a>hds</a></li>
-            </ul> -->
-            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
             <div class="div3-item" draggable="true" ondragstart="domdrugstart(event)" ondragenter="domdrugenter(event)" ondragover="domdrugover(event)"
                 ondragleave="domdrugleave(event)" ondrop="domdrop(event)" ondragend="domdrapend(event)">zsj</div>
-            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
             <div class="div3-item" draggable="true" ondragstart="domdrugstart(event)" ondragenter="domdrugenter(event)" ondragover="domdrugover(event)"
                 ondragleave="domdrugleave(event)" ondrop="domdrop(event)" ondragend="domdrapend(event)">hds</div>
-            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
             <div class="div3-item" draggable="true" ondragstart="domdrugstart(event)" ondragenter="domdrugenter(event)" ondragover="domdrugover(event)"
                 ondragleave="domdrugleave(event)" ondrop="domdrop(event)" ondragend="domdrapend(event)">nyf</div>
-            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
             <div class="div3-item" draggable="true" ondragstart="domdrugstart(event)" ondragenter="domdrugenter(event)" ondragover="domdrugover(event)"
                 ondragleave="domdrugleave(event)" ondrop="domdrop(event)" ondragend="domdrapend(event)">fnn</div>
-            <!-- <div class="div3-item" ondragover="allowDrop(event)" ondrop="drop(event)"></div> -->
         </div>
         <div class="ninth">
             <div class="title">
@@ -149,12 +139,34 @@
                     },
                     {
                         title: 'Age',
-                        key: 'age',
-                        sortable: true
+                        key: 'age', 
+                        filters: [
+                            {
+                                label: 'Greater than 25',
+                                value: 1
+                            },
+                            {
+                                label: 'Less than 25',
+                                value: 2
+                            }
+                        ],
+                        filterMultiple: false,
+                        filterMethod (value, row) {
+                            if (value === 1) {
+                                return row.age > 25;
+                            } else if (value === 2) {
+                                return row.age < 25;
+                            }
+                        }
                     },
                     {
                         title: 'Address',
                         key: 'address'
+                    },
+                    {
+                        title:"date",
+                        key:'date',
+                        sortable: true
                     }
                 ],
                 data1: [
