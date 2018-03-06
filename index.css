@@ -1,4 +1,5 @@
-html,body {
+html,
+body {
     margin: 0px
 }
 
@@ -32,9 +33,11 @@ html,body {
 .title a {
     color: grey;
 }
+
 .title a:hover {
     color: blue;
 }
+
 .second-left {
     width: 200px;
     position: absolute;
@@ -56,48 +59,61 @@ html,body {
     background-color: gold;
     height: 200px;
 }
-.fifth-left{
+
+.fifth-left {
     float: left;
     width: 200px;
     background-color: lightgray;
     height: 200px;
     margin-left: -100%
 }
-.fifth-main{
+
+.fifth {
+    overflow: hidden
+}
+
+.fifth-main {
     width: 100%;
-    height: 100%;
+    height: 200px;
     float: left;
 }
-.fifth-main .body{
+
+.fifth-main .body {
     background-color: gold;
     height: 200px;
     margin: 0 210px;
 }
-.fifth-right{
+
+.fifth-right {
     float: left;
     margin-left: -200px;
     width: 200px;
     background-color: lightgray;
     height: 200px;
 }
-.third-content{
+
+.third-content {
     display: flex;
     height: 200px;
 }
-.third-left{
+
+.third-left {
     flex-basis: 200px;
     background-color: lightgray
 }
-.third-main{
+
+.third-main {
     flex-grow: 1;
     background-color: gold;
     margin: 0 10px
 }
-.third-right{
+
+.third-right {
     flex-basis: 200px;
     background-color: lightgray
-}  
-.title::after{
+}
+
+.title::after {
     border: 10px solid #fff;
     border-right-color: #EBEBEB;
     width: 0px;
@@ -108,7 +124,8 @@ html,body {
     content: "";
     clear: both;
 }
-.title::before{
+
+.title::before {
     border: 10px solid #fff;
     border-left-color: #EBEBEB;
     width: 0px;
@@ -119,13 +136,15 @@ html,body {
     content: "";
     clear: both;
 }
-.fourth-middle{
+
+.fourth-middle {
     float: left;
     width: 100%;
     height: 200px;
     text-align: center;
 }
-.fourth-left{
+
+.fourth-left {
     float: left;
     width: 200px;
     height: 200px;
@@ -133,7 +152,8 @@ html,body {
     text-align: center;
     background-color: lightgrey
 }
-.fourth-right{
+
+.fourth-right {
     width: 200px;
     height: 200px;
     float: left;
@@ -141,11 +161,60 @@ html,body {
     text-align: center;
     background-color: lightgrey
 }
-.middle-inner{
+
+.middle-inner {
     margin: 0 210px;
     height: 200px;
     background-color: gold
 }
-.fourth{
+
+.fourth {
     overflow: hidden;
+}
+
+.sixth div:not(:first-child) {
+    width: 100px;
+    height: 100px;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+    background-color: gold
+}
+
+.sixth div:not(:first-child):hover {
+    width: 50%;
+    background-color: blue
+}
+
+.media2 {
+    transition-timing-function: ease
+}
+
+.media3 {
+    transition-timing-function: ease-in
+}
+
+.media4 {
+    transition-timing-function: ease-out
+}
+
+.media5 {
+    transition-timing-function: ease-in-out
+}
+
+.sixth {
+    height: 600px;
+}
+
+.seventh {
+    text-align: center;
+    height: 300px;
+}
+
+.div1 {
+    border: 1px solid #aaa;
+    width: 100px;
+    height: 66px;
+    padding: 10px;
+    margin: auto;
 }
